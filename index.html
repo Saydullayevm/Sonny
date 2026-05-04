@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sonny ELD — FMCSA-Certified Fleet Management Platform</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ NAV -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="assets/logo.png" alt="Sonny ELD" height="130" style="display:block;object-fit:contain;mix-blend-mode:multiply;" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#eld-device">ELD Device</a></li>
+        <li><a href="#gps">GPS Tracking</a></li>
+        <li><a href="#ifta">IFTA Reports</a></li>
+        <li><a href="#integrations">Integrations</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="#contact" class="btn btn--primary">Get Started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ HERO -->
+  <section class="hero" id="home">
+    <div class="hero__grid-bg"></div>
+    <div class="hero__bg-shape"></div>
+    <div class="hero__bg-lines"></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <h1>Compliance Made <span class="highlight">Simple.</span><br>Fleet Management Made <span class="highlight">Powerful.</span></h1>
+        <p>Sonny ELD is the all-in-one platform built for truckers and fleet managers who demand reliability, accuracy, and real-time visibility — without the complexity.</p>
+        <div class="hero__actions">
+          <a href="#pricing" class="btn btn--primary btn--lg">View Pricing</a>
+          <a href="#eld-device" class="btn btn--outline btn--lg">Learn More</a>
+        </div>
+        <div class="hero__trust">
+          <div class="trust-item"><span class="trust-icon">&#10003;</span> FMCSA Registered</div>
+          <div class="trust-item"><span class="trust-icon">&#10003;</span> 24/7 Live Support</div>
+          <div class="trust-item"><span class="trust-icon">&#10003;</span> Easy Installation</div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="dashboard-mockup">
+          <div class="mockup__bar">
+            <span></span><span></span><span></span>
+            <div class="mockup__title-bar">Sonny ELD — Driver Dashboard</div>
+          </div>
+          <div class="mockup__screen">
+            <div class="mockup__header">
+              <div class="mockup__status">● ON DUTY — DRIVING</div>
+              <div class="mockup__clock" id="liveClock">--:-- --</div>
+            </div>
+            <div class="mockup__graph">
+              <div class="graph__label">Hours of Service Log — Today</div>
+              <div class="graph__row">
+                <span class="graph__tag">OFF</span>
+                <div class="graph__bar"><div class="bar__fill off" style="width:18%"></div></div>
+                <span class="graph__time">2h</span>
+              </div>
+              <div class="graph__row">
+                <span class="graph__tag">SB</span>
+                <div class="graph__bar"><div class="bar__fill sb" style="width:8%"></div></div>
+                <span class="graph__time">1h</span>
+              </div>
+              <div class="graph__row">
+                <span class="graph__tag">D</span>
+                <div class="graph__bar"><div class="bar__fill drive" style="width:58%"></div></div>
+                <span class="graph__time">7h</span>
+              </div>
+              <div class="graph__row">
+                <span class="graph__tag">ON</span>
+                <div class="graph__bar"><div class="bar__fill on" style="width:33%"></div></div>
+                <span class="graph__time">4h</span>
+              </div>
+            </div>
+            <div class="mockup__divider"></div>
+            <div class="mockup__stats">
+              <div class="stat-pill"><span class="stat-label">Miles</span><span class="stat-val">482</span></div>
+              <div class="stat-pill"><span class="stat-label">Drive Left</span><span class="stat-val">4h 20m</span></div>
+              <div class="stat-pill"><span class="stat-label">Violations</span><span class="stat-val green">None</span></div>
+              <div class="stat-pill"><span class="stat-label">Status</span><span class="stat-val gold">Compliant</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-stat">
+        <strong>2,000+</strong>
+        <span>Active Drivers</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <strong>99.9%</strong>
+        <span>Platform Uptime</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <strong>24/7</strong>
+        <span>Live Support</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <strong>FMCSA</strong>
+        <span>Certified Device</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <strong>4.9 / 5</strong>
+        <span>Average Rating</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Platform Features</span>
+        <h2>Built for the Road. Designed for Compliance.</h2>
+        <p>Every feature in the Sonny ELD platform exists to keep your operation efficient, audit-ready, and fully compliant — without adding complexity to your day.</p>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-card feature-card--wide">
+          <div class="feature-card__number">01</div>
+          <div class="feature-card__content">
+            <h3>Electronic Hours of Service Logging</h3>
+            <p>Sonny ELD automatically captures and records your driving hours directly from the truck's engine, eliminating manual logbooks and reducing human error. Every duty status change is timestamped and stored in real time, giving both drivers and fleet managers an accurate, always-up-to-date record of HOS compliance.</p>
+            <ul class="feature-list">
+              <li>Automatic duty status detection</li>
+              <li>Instant log editing with required annotations</li>
+              <li>Exempt and short-haul support</li>
+              <li>Co-driver and team driving modes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__number">02</div>
+          <div class="feature-card__content">
+            <h3>Real-Time GPS Fleet Tracking</h3>
+            <p>Monitor every vehicle in your fleet from a single intuitive portal. Live location updates, route history, and geofence alerts give you total visibility — whether you manage one truck or one hundred.</p>
+            <ul class="feature-list">
+              <li>Live map with 4G/LTE updates</li>
+              <li>Full trip history & route replay</li>
+              <li>Geofence alerts & stop detection</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__number">03</div>
+          <div class="feature-card__content">
+            <h3>IFTA Mileage & Fuel Reporting</h3>
+            <p>Automated per-state mileage tracking means quarterly IFTA filing takes minutes, not hours. All data is collected automatically during every trip and compiled into a ready-to-submit report.</p>
+            <ul class="feature-list">
+              <li>Per-state mileage breakdown</li>
+              <li>Fuel purchase tracking</li>
+              <li>Audit-ready report export</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__number">04</div>
+          <div class="feature-card__content">
+            <h3>Violation Alerts & Compliance Monitoring</h3>
+            <p>Proactive alerts notify drivers and fleet managers of potential HOS violations before they occur. Stay ahead of audits and DOT inspections with a continuously monitored compliance dashboard.</p>
+            <ul class="feature-list">
+              <li>Pre-violation warnings</li>
+              <li>Real-time compliance dashboard</li>
+              <li>DOT inspection mode</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__number">05</div>
+          <div class="feature-card__content">
+            <h3>Digital DVIR Inspections</h3>
+            <p>Replace paper-based pre- and post-trip inspection reports with a fast, paperless digital process. Drivers complete inspections in the platform, and fleet managers receive instant notifications for any defects reported.</p>
+            <ul class="feature-list">
+              <li>Pre- and post-trip reports</li>
+              <li>Defect flagging & repair tracking</li>
+              <li>Permanent inspection history log</li>
+            </ul>
+          </div>
+        </div>
+
+
+       <div class="feature-card feature-card--wide">
+          <div class="feature-card__number">06</div>
+          <div class="feature-card__content">
+            <h3>Engine Diagnostics & Fault Codes</h3>
+            <p>Receive real-time engine fault code alerts directly through the platform. Identify mechanical issues early, reduce unplanned downtime, and maintain a detailed maintenance history for every vehicle in your fleet.</p>
+            <ul class="feature-list">
+              <li>Real-time fault code detection</li>
+              <li>Maintenance scheduling reminders</li>
+              <li>Vehicle health history</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ ELD DEVICE -->
+  <section class="product-section" id="eld-device">
+    <div class="container product-section__inner">
+      <div class="product-section__visual">
+        <div class="device-card">
+          <div class="device-card__top">
+            <div class="device-dot active"></div>
+            <div class="device-dot"></div>
+            <div class="device-dot"></div>
+          </div>
+          <div class="device-card__screen">
+            <div class="device-label">SONNY ELD DEVICE</div>
+            <div class="device-screen-row"><span>Engine:</span><span class="green">Connected</span></div>
+            <div class="device-screen-row"><span>Signal:</span><span class="gold">4G LTE ████░</span></div>
+            <div class="device-screen-row"><span>GPS:</span><span class="green">Active — 12 satellites</span></div>
+            <div class="device-screen-row"><span>HOS Sync:</span><span class="green">Real-time</span></div>
+            <div class="device-screen-row"><span>Compliance:</span><span class="green">FMCSA Certified</span></div>
+            <div class="device-screen-row"><span>Driver:</span><span>Logged In</span></div>
+          </div>
+          <div class="device-card__footer">Plug-and-Play — No Tools Required</div>
+        </div>
+      </div>
+      <div class="product-section__text">
+        <span class="badge">ELD Device</span>
+        <h2>Precision Engineering for Every Mile</h2>
+        <p class="product-lead">Our ELD device is built for reliability, accuracy, and ease of use. It automatically records driving hours, ensuring full compliance with FMCSA regulations while eliminating the risk of manual errors.</p>
+        <p>The device connects seamlessly to your truck's diagnostic port and syncs data in real time, giving both drivers and fleet managers complete visibility over Hours of Service. Whether you're an owner-operator running solo or managing a multi-vehicle fleet, Sonny ELD adapts to your operation with zero friction.</p>
+        <p>No complicated setup. No third-party technicians. Just plug it in and drive — the system handles everything else automatically.</p>
+        <div class="benefit-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Automatic Log Tracking</strong>
+              <span>Hours recorded directly from engine data — no driver input required</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Real-Time Data Sync</strong>
+              <span>Live updates via 4G LTE to the fleet portal and driver interface</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Easy Installation</strong>
+              <span>Connects to the 9-pin or 6-pin diagnostic port in under two minutes</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Fully FMCSA Compliant</strong>
+              <span>Registered and certified — accepted at all DOT roadside inspections</span>
+            </div>
+          </div>
+        </div>
+        <p class="product-closing">With Sonny ELD, you don't just stay compliant — you stay in control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ GPS TRACKING -->
+  <section class="product-section product-section--alt" id="gps">
+    <div class="container product-section__inner product-section__inner--reverse">
+      <div class="product-section__text">
+        <span class="badge">GPS Fleet Tracking</span>
+        <h2>Total Fleet Visibility, All the Time</h2>
+        <p class="product-lead">Track your fleet in real time with our advanced GPS tracking system. Know where your trucks are at all times, optimize routes, and improve overall operational efficiency across your entire operation.</p>
+        <p>Our system delivers accurate location data, comprehensive trip history, and actionable insights that help reduce fuel costs, minimize idle time, and increase driver accountability. Every data point collected is available instantly through your fleet management portal.</p>
+        <p>Whether you need to reroute a driver around traffic, verify a delivery arrival, or review last month's mileage by state, the information is always at your fingertips — accessible from any device, anywhere.</p>
+        <div class="benefit-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Live Fleet Tracking</strong>
+              <span>Real-time map view updated continuously via 4G LTE connectivity</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Route Optimization</strong>
+              <span>Identify inefficient routes and reduce fuel consumption across your fleet</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Trip History Reports</strong>
+              <span>Full route replay and stop-by-stop history for any vehicle, any date</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Improved Operational Visibility</strong>
+              <span>Smarter tracking means better decisions — on the road and in the office</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-section__visual">
+        <div class="map-card">
+          <div class="map-card__header">
+            <span class="map-live-dot"></span> Live Fleet Map — 3 Vehicles Active
+          </div>
+          <div class="map-card__body">
+            <div class="map-bg">
+              <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                <rect width="320" height="200" fill="#1a2540"/>
+                <!-- Grid lines -->
+                <line x1="0" y1="50" x2="320" y2="50" stroke="#243060" stroke-width="0.5"/>
+                <line x1="0" y1="100" x2="320" y2="100" stroke="#243060" stroke-width="0.5"/>
+                <line x1="0" y1="150" x2="320" y2="150" stroke="#243060" stroke-width="0.5"/>
+                <line x1="80" y1="0" x2="80" y2="200" stroke="#243060" stroke-width="0.5"/>
+                <line x1="160" y1="0" x2="160" y2="200" stroke="#243060" stroke-width="0.5"/>
+                <line x1="240" y1="0" x2="240" y2="200" stroke="#243060" stroke-width="0.5"/>
+                <!-- Roads -->
+                <path d="M0,100 Q80,90 160,100 Q240,110 320,100" stroke="#2a3a60" stroke-width="6" fill="none"/>
+                <path d="M0,100 Q80,90 160,100 Q240,110 320,100" stroke="#3a4a80" stroke-width="2" fill="none" stroke-dasharray="8,6"/>
+                <path d="M160,0 Q155,80 160,100 Q165,140 160,200" stroke="#2a3a60" stroke-width="6" fill="none"/>
+                <path d="M160,0 Q155,80 160,100 Q165,140 160,200" stroke="#3a4a80" stroke-width="2" fill="none" stroke-dasharray="8,6"/>
+                <!-- Route trace -->
+                <path d="M40,160 Q80,130 120,100 Q150,78 190,70" stroke="#F5A623" stroke-width="2" fill="none" stroke-dasharray="4,3" opacity="0.7"/>
+                <!-- Truck markers -->
+                <circle cx="190" cy="70" r="8" fill="#F5A623" opacity="0.2"/>
+                <circle cx="190" cy="70" r="5" fill="#F5A623"/>
+                <text x="202" y="66" font-size="9" fill="#F5A623" font-family="sans-serif">Truck 1</text>
+                <circle cx="260" cy="105" r="5" fill="#4CAF50"/>
+                <text x="272" y="101" font-size="9" fill="#4CAF50" font-family="sans-serif">Truck 2</text>
+                <circle cx="90" cy="145" r="5" fill="#60a5fa"/>
+                <text x="102" y="141" font-size="9" fill="#60a5fa" font-family="sans-serif">Truck 3</text>
+              </svg>
+            </div>
+          </div>
+          <div class="map-card__footer">
+            <div class="map-stat"><span>Truck 1</span><span class="green">Moving — 62 mph</span></div>
+            <div class="map-stat"><span>Truck 2</span><span class="green">Moving — 58 mph</span></div>
+            <div class="map-stat"><span>Truck 3</span><span class="gold">Idle — 14 min</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ IFTA -->
+  <section class="product-section" id="ifta">
+    <div class="container product-section__inner">
+      <div class="product-section__visual">
+        <div class="ifta-card">
+          <div class="ifta-card__header">IFTA Quarterly Report — Q1 2025</div>
+          <div class="ifta-table">
+            <div class="ifta-row ifta-row--head">
+              <span>State</span><span>Miles</span><span>Gallons</span><span>Status</span>
+            </div>
+            <div class="ifta-row"><span>Texas</span><span>4,820</span><span>182</span><span class="green">Filed</span></div>
+            <div class="ifta-row"><span>Oklahoma</span><span>1,940</span><span>74</span><span class="green">Filed</span></div>
+            <div class="ifta-row"><span>Kansas</span><span>2,310</span><span>88</span><span class="green">Filed</span></div>
+            <div class="ifta-row"><span>Colorado</span><span>1,650</span><span>63</span><span class="gold">Pending</span></div>
+            <div class="ifta-row"><span>Missouri</span><span>980</span><span>37</span><span class="gold">Pending</span></div>
+          </div>
+          <div class="ifta-card__total">
+            <span>Total Miles:</span><strong>11,700</strong>
+            <span>Total Gallons:</span><strong>444</strong>
+          </div>
+          <div class="ifta-card__footer">Report auto-generated — ready to submit</div>
+        </div>
+      </div>
+      <div class="product-section__text">
+        <span class="badge">IFTA Reporting</span>
+        <h2>Quarterly Filings Without the Headache</h2>
+        <p class="product-lead">Simplify your IFTA reporting with automated, accurate fuel and mileage tracking. Our system collects and organizes every data point you need to file reports quickly, correctly, and with total confidence.</p>
+        <p>Every mile driven is recorded by state, every fuel purchase is logged, and all of it is compiled into a clean, ready-to-submit report at the end of each quarter. No spreadsheets. No manual calculations. No last-minute stress.</p>
+        <p>In the event of an audit, your data is always organized, complete, and available for immediate review — giving you full protection without any extra effort on your part.</p>
+        <div class="benefit-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Automatic Mileage Tracking by State</strong>
+              <span>Every state line crossed is recorded and attributed automatically</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Fuel Purchase Tracking</strong>
+              <span>Log fuel purchases and have them factored into your reports automatically</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Ready-to-File Reports</strong>
+              <span>Clean, formatted quarterly reports generated with one click</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l5 5L17 4" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Audit Support</strong>
+              <span>Stay organized and audit-ready at all times with a complete data trail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Setup Process</span>
+        <h2>From Order to Compliant in Under 24 Hours</h2>
+        <p>We've engineered every step of the setup process to be as straightforward as possible. There's no technical expertise required, no configuration calls, and no downtime for your truck.</p>
+      </div>
+      <div class="how__steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <div class="step__content">
+            <h3>Order &amp; Receive Your Device</h3>
+            <p>Choose your plan and place your order. Your Sonny ELD device ships within one business day and arrives ready to use — no activation fees, no hidden setup charges.</p>
+            <div class="step__detail">Ships within 1 business day</div>
+          </div>
+        </div>
+        <div class="step__connector"><div class="connector__line"></div><div class="connector__arrow">&#8594;</div></div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <div class="step__content">
+            <h3>Plug Into Your Truck's Diagnostic Port</h3>
+            <p>Connect the device directly to your truck's 9-pin or 6-pin diagnostic port. The connection takes under two minutes and requires no tools, no wiring, and no technician. The device powers on automatically when the engine starts.</p>
+            <div class="step__detail">Compatible with all CMV truck types</div>
+          </div>
+        </div>
+        <div class="step__connector"><div class="connector__line"></div><div class="connector__arrow">&#8594;</div></div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <div class="step__content">
+            <h3>Log In &amp; Start Driving</h3>
+            <p>Access your Sonny ELD account through the driver portal or tablet interface. Your HOS logging, GPS tracking, and compliance monitoring begin automatically — fully synchronized from the moment the engine turns on.</p>
+            <div class="step__detail">Fully compliant from day one</div>
+          </div>
+        </div>
+        <div class="step__connector"><div class="connector__line"></div><div class="connector__arrow">&#8594;</div></div>
+        <div class="step">
+          <div class="step__num">04</div>
+          <div class="step__content">
+            <h3>Manage Your Fleet in Real Time</h3>
+            <p>Fleet managers get instant access to the Sonny ELD management portal — a centralized dashboard to monitor all vehicles, review logs, run IFTA reports, and respond to violations before they become costly problems.</p>
+            <div class="step__detail">Available on all devices</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- ═══════════════════════════════════════ INTEGRATIONS -->
+<section class="integrations" id="integrations">
+  <div class="container">
+    <div class="section-header">
+      <h2>Powerful <span class="highlight">Integrations</span></h2>
+      <p>Connect Sonny ELD with industry-leading platforms to streamline your operations and keep your entire workflow in one place.</p>
+    </div>
+
+    <div class="integrations__grid">
+      <a class="integration-card" href="#contact">
+        <img src="assets/integrations/highway.png" alt="Highway" />
+      </a>
+      <a class="integration-card integration-card--dark" href="#contact">
+        <img src="assets/integrations/catena.png" alt="Catena" />
+      </a>
+      <a class="integration-card" href="#contact">
+        <img src="assets/integrations/truckertools.png" alt="Trucker Tools" />
+      </a>
+      <a class="integration-card integration-card--dark" href="#contact">
+        <img src="assets/integrations/macropoint.png" alt="Descartes MacroPoint" />
+      </a>
+      <a class="integration-card integration-card--dark" href="#contact">
+        <img src="assets/integrations/project44.png" alt="project44" />
+      </a>
+      <a class="integration-card integration-card--dark" href="#contact">
+        <img src="assets/integrations/fourkites.png" alt="FourKites" />
+      </a>
+    </div>
+
+    <div class="integrations__process">
+      <h3>Simple Integration Process</h3>
+      <div class="integrations__steps">
+        <div class="int-step">
+          <div class="int-step__num">01</div>
+          <h4>Choose Your Platform</h4>
+          <p>Select from our list of supported integrations or reach out about a custom connection for your existing tools.</p>
+        </div>
+        <div class="int-step__arrow">&#8594;</div>
+        <div class="int-step">
+          <div class="int-step__num">02</div>
+          <h4>Connect in Minutes</h4>
+          <p>Authorize the integration through your Sonny ELD portal. No code required — just a few clicks and you're live.</p>
+        </div>
+        <div class="int-step__arrow">&#8594;</div>
+        <div class="int-step">
+          <div class="int-step__num">03</div>
+          <h4>Data Flows Automatically</h4>
+          <p>HOS logs, GPS data, and compliance records sync in real time between Sonny ELD and your connected platforms.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="integrations__cta">
+      <p>Want to integrate your platform with Sonny ELD?</p>
+      <a href="#contact" class="btn btn--primary">Get in Touch &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ═══════════════════════════════════════ PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Pricing</span>
+        <h2>Straightforward Pricing. No Surprises.</h2>
+        <p>We believe in keeping things simple. Whether you're an independent owner-operator or running a large fleet, we have a solution that fits.</p>
+      </div>
+      <div class="pricing__grid">
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__label">Owner-Operator</div>
+          <div class="pricing-card__price"><sup>$</sup>27<span>/week per truck</span></div>
+          <p class="pricing-card__desc">Everything you need to stay fully compliant and manage your operation with confidence — at a price that makes sense for independent drivers.</p>
+          <ul class="pricing-card__features">
+            <li>Electronic Logbook &amp; Automatic HOS</li>
+            <li>Real-Time GPS Fleet Tracking</li>
+            <li>Violation Alerts &amp; Compliance Dashboard</li>
+            <li>Digital DVIR Pre/Post-Trip Inspections</li>
+            <li>IFTA Mileage &amp; Fuel Reports</li>
+            <li>Engine Diagnostics &amp; Fault Code Alerts</li>
+            <li>DOT Inspection Mode</li>
+            <li>24/7 Live Customer Support</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">Get Started Today</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card__label">Fleet &amp; Enterprise</div>
+          <div class="pricing-card__price">Custom</div>
+          <p class="pricing-card__desc">Running multiple trucks? We work directly with fleet operators to build a plan that matches your scale, your needs, and your budget.</p>
+          <ul class="pricing-card__features">
+            <li>Everything in Owner-Operator</li>
+            <li>Volume-Based Pricing Discounts</li>
+            <li>Dedicated Account Manager</li>
+            <li>Fleet-Wide Reporting &amp; Analytics</li>
+            <li>Custom API Integrations</li>
+            <li>Priority Technical Support</li>
+            <li>Onboarding Assistance</li>
+            <li>Flexible Billing Options</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Contact Us for a Quote</a>
+        </div>
+
+      </div>
+      <div class="pricing__note">
+        Free device included with annual plans. Month-to-month available. Cancel anytime.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ REVIEWS MARQUEE -->
+  <section class="reviews" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Customer Reviews</span>
+        <h2>Trusted by Drivers and Fleet Managers Across the Country</h2>
+        <p>Real feedback from real operators who rely on Sonny ELD every day on the road.</p>
+      </div>
+      <div class="reviews__rating-row">
+        <div class="rating-summary">
+          <span class="rating-num">4.9</span>
+          <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <span class="rating-label">Based on 300+ verified reviews</span>
+        </div>
+      </div>
+    </div>
+    <div class="marquee-outer">
+      <div class="marquee-wrapper">
+      <!-- Set 1 -->
+      <div class="marquee-track">
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Easiest ELD I've ever used. Plugged it in and was logging within minutes. The support team actually picks up the phone — that alone is worth it."</p><div class="review-author"><div class="avatar">MR</div><div><strong>Marcus Reynolds</strong><span>Owner-Operator — Texas</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"We switched our whole fleet over and haven't looked back. The GPS tracking and violation alerts have saved us from several potential fines already."</p><div class="review-author"><div class="avatar">LJ</div><div><strong>Linda Johnson</strong><span>Fleet Manager — Ohio</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"IFTA reporting used to take me half a day every quarter. Now it's automatic. I don't even think about it anymore. That's exactly how it should be."</p><div class="review-author"><div class="avatar">DK</div><div><strong>David Kim</strong><span>Independent Driver — California</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The DOT inspection mode is a lifesaver. Last roadside check took less than 3 minutes. The officer said it was one of the cleanest ELD setups he'd seen."</p><div class="review-author"><div class="avatar">TW</div><div><strong>Tommy Walters</strong><span>Long-Haul Driver — Tennessee</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I manage 18 trucks and the portal gives me everything I need at a glance. Real-time locations, compliance status, maintenance flags — all in one place."</p><div class="review-author"><div class="avatar">RS</div><div><strong>Robert Sanchez</strong><span>Fleet Owner — Arizona</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Customer service is incredible. Had a question at 11pm and someone actually helped me resolve it on the spot. You don't get that from the big providers."</p><div class="review-author"><div class="avatar">AH</div><div><strong>Anita Hayes</strong><span>Owner-Operator — Georgia</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Installation literally took two minutes. I was skeptical but it just works. My logs are always accurate and I haven't had a single violation since switching."</p><div class="review-author"><div class="avatar">JP</div><div><strong>James Parker</strong><span>Independent Driver — Florida</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The engine fault alerts caught a problem before it became a breakdown. That one feature alone has paid for the subscription several times over."</p><div class="review-author"><div class="avatar">BM</div><div><strong>Brian Miller</strong><span>Fleet Operator — Illinois</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Switched from a much more expensive competitor. Same features, better support, lower price. Wish I'd made the switch two years ago."</p><div class="review-author"><div class="avatar">CN</div><div><strong>Carlos Navarro</strong><span>Owner-Operator — New Mexico</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I run a small fleet of 4 trucks and Sonny ELD keeps everything organized. The IFTA reports and GPS history have made my accountant's job way easier."</p><div class="review-author"><div class="avatar">PL</div><div><strong>Patricia Lowe</strong><span>Fleet Owner — Colorado</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The violation alert system is what really sold me. I get notified before I'm close to a violation, not after. That's the kind of proactive tool every driver needs."</p><div class="review-author"><div class="avatar">KT</div><div><strong>Kevin Thompson</strong><span>Long-Haul Driver — Pennsylvania</span></div></div></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Simple, reliable, and the team behind it actually cares. Compliance used to feel like a chore — now it's just part of the routine. Highly recommend Sonny ELD."</p><div class="review-author"><div class="avatar">SW</div><div><strong>Sandra Williams</strong><span>Independent Driver — Oregon</span></div></div></div>
+      </div>
+      <!-- Set 2 — exact duplicate for seamless loop -->
+      
+    </div><!-- end marquee-outer -->
+  </section>
+
+  <!-- ═══════════════════════════════════════ ABOUT -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <span class="badge">About Sonny ELD</span>
+        <h2>Built to Solve Real Problems in Trucking</h2>
+        <p class="about-lead">We built this company to address two persistent problems in the trucking industry: unreliable ELD systems and unresponsive support. We've experienced the frustration firsthand — systems that fail at the worst moments, customer service that puts you on hold for an hour, and platforms that are more complicated than the compliance problems they're supposed to solve.</p>
+        <p>Sonny ELD was created with a clear mission: to provide a dependable, easy-to-use platform backed by fast, knowledgeable human support that keeps your fleet compliant and moving without disruption.</p>
+        <p>We understand the pressure carriers face every single day — the hours, the regulations, the inspections, the deadlines. Compliance shouldn't add stress to that. It should be something you set up once and trust completely. That's exactly what we've built.</p>
+        <p>Our platform is simple by design, powerful by necessity, and supported by a team that treats every customer like a partner — not a ticket number.</p>
+        <div class="about__values">
+          <div class="value-item">
+            <strong>Reliability First</strong>
+            <span>Systems that work when you need them — every mile, every day</span>
+          </div>
+          <div class="value-item">
+            <strong>Human Support</strong>
+            <span>Real people available 24/7 — not bots, not automated menus</span>
+          </div>
+          <div class="value-item">
+            <strong>Built for Truckers</strong>
+            <span>Designed with drivers in mind — simple, intuitive, distraction-free</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__stats">
+        <div class="about-stat-card">
+          <strong>2,000+</strong>
+          <span>Active drivers trusting our platform daily</span>
+        </div>
+        <div class="about-stat-card">
+          <strong>99.9%</strong>
+          <span>Platform uptime — reliability you can count on</span>
+        </div>
+        <div class="about-stat-card">
+          <strong>&lt; 5 min</strong>
+          <span>Average support response time</span>
+        </div>
+        <div class="about-stat-card">
+          <strong>All 50</strong>
+          <span>States covered — nationwide compliance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__text">
+          <h2>Ready to Simplify Your Compliance?</h2>
+          <p>Talk to our team and we'll help you find the right setup for your operation. Whether you're an owner-operator just getting started or a fleet looking to switch providers, we're here to make it easy.</p>
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 5a2 2 0 012-2h1.5a1 1 0 01.95.68l1 3a1 1 0 01-.23 1.05L7.1 8.85a11.05 11.05 0 005.05 5.05l1.12-1.12a1 1 0 011.05-.23l3 1a1 1 0 01.68.95V17a2 2 0 01-2 2C7.16 19 1 12.84 1 5a2 2 0 012-2z" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Phone number coming soon</span>
+            </div>
+            <div class="contact__info-item">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M2 4h16v12H2z" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 4l8 8 8-8" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Email coming soon</span>
+            </div>
+            <div class="contact__info-item">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#F5A623" stroke-width="1.5"/><path d="M10 6v4l3 3" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>24/7 Live Support Available</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="john@company.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label>Number of Trucks</label>
+              <select>
+                <option value="">Select fleet size</option>
+                <option>1 — Owner-Operator</option>
+                <option>2–5 Trucks</option>
+                <option>6–20 Trucks</option>
+                <option>20+ Trucks</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Message (Optional)</label>
+            <textarea placeholder="Tell us about your operation or any questions you have..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Request a Demo &rarr;</button>
+          <p class="form-note">We typically respond within a few hours. No spam, ever.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__tagline">FMCSA-certified ELD and fleet management platform for modern trucking operations. Built on reliability. Backed by real support.</p>
+        <div class="footer__contact-quick">
+          <span>Phone: Coming Soon</span>
+          <span>Email: Coming Soon</span>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div>
+          <strong>Platform</strong>
+          <a href="#eld-device">ELD Device</a>
+          <a href="#gps">GPS Tracking</a>
+          <a href="#ifta">IFTA Reports</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div>
+          <strong>Company</strong>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__legal-sections container">
+      <details class="legal-block">
+        <summary>Privacy Policy</summary>
+        <p>We value your privacy and are committed to protecting your personal and business data. All information collected through our platform is securely stored and used only to provide and improve our services. We do not sell or share your data with third parties without your explicit consent. Our infrastructure uses industry-standard encryption and security protocols to ensure your data remains protected at all times. Your trust is important to us, and we take every measure necessary to keep your information safe.</p>
+      </details>
+      <details class="legal-block">
+        <summary>Terms of Use</summary>
+        <p>By using the Sonny ELD platform, you agree to comply with all applicable federal, state, and local laws and regulations, including FMCSA guidelines. Our services are provided to support compliance and operational efficiency, but it is the sole responsibility of the user to ensure proper and lawful use of the system. We reserve the right to update these terms at any time to reflect platform improvements, regulatory changes, or legal requirements. Continued use of the platform after updates constitutes acceptance of the revised terms.</p>
+      </details>
+      <details class="legal-block">
+        <summary>Help Center</summary>
+        <p>Our Help Center provides answers to common questions and step-by-step guidance for setting up and using the Sonny ELD platform. From device installation and account configuration to log editing, IFTA filing, and DOT inspection preparation — you'll find clear, practical guidance for every part of the system. If you can't find the answer you need, our support team is available 24/7 to assist you directly. Fast answers, no runaround. Find solutions quickly and keep your operations running smoothly.</p>
+      </details>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <span>&copy; 2026 Sonny ELD. All rights reserved.</span>
+        <span>FMCSA Registered ELD Provider</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
