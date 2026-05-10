@@ -1150,3 +1150,16 @@ img, video, iframe {
     box-sizing: border-box !important;
   }
 }
+
+@media (max-width: 600px) {
+  .integration-card {
+    padding: 20px 12px;
+    min-height: 110px;
+  }
+
+  .integration-card img {
+    width: 90% !important;
+    height: 48px !important;
+    object-fit: contain;
+  }
+}
