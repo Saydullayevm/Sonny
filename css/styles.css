@@ -851,3 +851,239 @@ html, body {
 }
 
 .avatar { object-fit: cover; }
+
+/* ── OVERFLOW FIXES ─────────────────────────────────── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.nav {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.nav__links {
+  display: none !important;
+}
+
+@media (min-width: 901px) {
+  .nav__links {
+    display: flex !important;
+  }
+}
+
+.hero__bg-shape {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .hero__bg-shape {
+    display: block;
+  }
+}
+
+.marquee-outer {
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+.marquee-track {
+  will-change: transform;
+}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+/* Fix product section cards not overflowing */
+.device-card,
+.map-card,
+.ifta-card {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.device-screen-row {
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+/* ── NAV MOBILE FIX ─────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .nav__logo img {
+    height: 70px;
+  }
+
+  .nav__hamburger {
+    display: flex;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .nav__cta {
+    display: none;
+  }
+}
+
+/* ── FOOTER MOBILE FIX ──────────────────────────────── */
+@media (max-width: 900px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 16px;
+  }
+
+  .footer__tagline {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .footer__contact-quick {
+    padding-left: 0;
+  }
+
+  .footer__links {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-left: 0;
+  }
+
+  .footer__links div {
+    padding-left: 0;
+  }
+
+  .footer__links a,
+  .footer__links strong,
+  .footer__links span {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .footer__legal-sections {
+    padding: 24px 0;
+  }
+
+  .footer__bottom .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding: 0 16px;
+  }
+}
+
+/* ── INTEGRATION STEPS MOBILE FIX ───────────────────── */
+@media (max-width: 900px) {
+  .integrations__steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .int-step {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .int-step__arrow {
+    display: none;
+  }
+
+  .integrations__process {
+    padding: 0 16px;
+  }
+
+  .integrations__process h3 {
+    text-align: center;
+  }
+}
+
+
+/* ── HAMBURGER MENU OPEN FIX ────────────────────────── */
+@media (max-width: 900px) {
+  .nav--open .nav__links {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 20px 20px 28px;
+    border-bottom: 1px solid var(--gray-100);
+    box-shadow: var(--shadow);
+    gap: 14px;
+    z-index: 999;
+    width: 100%;
+  }
+
+  .nav--open .nav__links a {
+    font-size: 15px;
+    color: var(--navy);
+    padding: 4px 0;
+  }
+
+  .nav--open .nav__cta {
+    display: flex !important;
+    position: static;
+    flex-direction: column;
+    padding: 8px 20px 20px;
+    background: var(--white);
+    width: 100%;
+    z-index: 999;
+  }
+
+  .nav--open .nav__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ── LEGAL ACCORDION FOOTER FIX ─────────────────────── */
+@media (max-width: 900px) {
+  .footer__legal-sections {
+    padding: 24px 16px;
+  }
+
+  .legal-block summary {
+    font-size: 15px;
+    padding: 18px 0;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .legal-block p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    padding-bottom: 18px;
+    line-height: 1.75;
+  }
+
+  .legal-block {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .legal-block summary::after {
+    font-size: 20px;
+    color: rgba(255,255,255,0.4);
+  }
+}
+
+@media (max-width: 900px) {
+  .nav--open .nav__cta { display: none !important; }
+}
