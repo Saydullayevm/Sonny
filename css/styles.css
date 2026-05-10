@@ -339,7 +339,7 @@ body {
 .marquee-track {
   display: flex;
   gap: 24px;
-  animation: marquee 40s linear infinite;
+  animation: marquee 45s linear infinite;
   width: max-content !important;
   max-width: none !important;
   flex-shrink: 0;
@@ -1127,5 +1127,42 @@ img, video, iframe {
   .about-stat-card span {
     font-size: 12.5px;
     line-height: 1.45;
+  }
+}
+
+/* ── CONTACT FORM MOBILE POLISH ─────────────────────── */
+@media (max-width: 900px) {
+  .contact__form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .contact__form input,
+  .contact__form select,
+  .contact__form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .contact__form textarea {
+    min-height: 100px;
+  }
+
+  .contact__form .btn--full {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 16px 20px;
   }
 }
