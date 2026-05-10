@@ -1130,39 +1130,23 @@ img, video, iframe {
   }
 }
 
-/* ── CONTACT FORM MOBILE POLISH ─────────────────────── */
+/* ── CONTACT FORM FINAL FIX ─────────────────────────── */
 @media (max-width: 900px) {
-  .contact__form {
-    width: 100%;
-    max-width: 100%;
+  .contact {
+    overflow: hidden;
   }
-
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .form-group {
+  
+  .contact__inner {
+    overflow: hidden;
     width: 100%;
   }
 
   .contact__form input,
   .contact__form select,
   .contact__form textarea {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-
-  .contact__form textarea {
-    min-height: 100px;
-  }
-
-  .contact__form .btn--full {
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 15px;
-    padding: 16px 20px;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
   }
 }
