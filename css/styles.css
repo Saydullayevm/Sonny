@@ -337,9 +337,14 @@ body {
 .marquee-outer::after  { right: 0; background: linear-gradient(-90deg, var(--white), transparent); }
 
 .marquee-track {
-  display: flex; gap: 24px;
-  animation: marquee 50s linear infinite;
-  width: max-content;
+  display: flex;
+  gap: 24px;
+  animation: marquee 40s linear infinite;
+  width: max-content !important;
+  max-width: none !important;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  will-change: transform;
 }
 .marquee-track:hover { animation-play-state: paused; }
 
@@ -885,7 +890,9 @@ html, body {
 
 .marquee-outer {
   overflow: hidden;
-  max-width: 100vw;
+  max-width: 100vw !important;
+  width: 100%;
+  display: flex;
 }
 
 .marquee-track {
@@ -893,7 +900,6 @@ html, body {
 }
 
 * {
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1086,4 +1092,40 @@ img, video, iframe {
 
 @media (max-width: 900px) {
   .nav--open .nav__cta { display: none !important; }
+}
+
+/* ── NAV WHITE BACKGROUND ───────────────────────────── */
+.nav {
+  background: rgba(255,255,255,1) !important;
+}
+
+/* ── ABOUT STATS MOBILE FIX ─────────────────────────── */
+@media (max-width: 600px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about__stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .about-stat-card {
+    padding: 20px 14px;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .about-stat-card strong {
+    font-size: 24px;
+    line-height: 1.1;
+    word-break: break-word;
+  }
+
+  .about-stat-card span {
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
 }

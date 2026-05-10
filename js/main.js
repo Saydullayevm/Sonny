@@ -25,7 +25,7 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 30000);
 
-// ── Scroll reveal
+// ── Scroll reveal (review cards excluded)
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -35,20 +35,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08 });
 
 document.querySelectorAll(
-  '.feature-card, .step, .pricing-card, .review-card, ' +
+  '.feature-card, .step, .pricing-card, ' +
   '.benefit-item, .about-stat-card, .value-item, ' +
   '.device-card, .map-card, .ifta-card, .trust-stat, .product-section__text > *'
 ).forEach(el => {
   el.classList.add('reveal');
   revealObserver.observe(el);
 });
-
-// ── Duplicate marquee cards so the loop is seamless
-const track = document.getElementById('marqueeTrack');
-if (track) {
-  const clone = track.innerHTML;
-  track.innerHTML += clone;
-}
 
 // ── Contact form
 const form = document.getElementById('contactForm');
